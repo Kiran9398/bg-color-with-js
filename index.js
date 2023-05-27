@@ -1,0 +1,35 @@
+let containerEl = document.getElementById("container");
+let colorNameEl = document.getElementById("colorName");
+let btnEl = document.getElementById("btn");
+btnEl.style.width = "100px";
+btnEl.style.height = "30px";
+btnEl.style.fontSize = "15px";
+btnEl.style.fontFamily = "Open Sans";
+btnEl.style.border = "none";
+btnEl.style.cursor = "pointer";
+btnEl.style.borderRadius = "3px";
+containerEl.style.borderRadius = "5px";
+containerEl.style.textAlign = "center";
+containerEl.style.width = "50%";
+containerEl.style.height = "30%";
+containerEl.style.paddingTop = "30px";
+containerEl.style.paddingBottom = "30px";
+containerEl.style.fontFamily = "Open Sans";
+containerEl.style.marginLeft = "25%";
+containerEl.style.marginTop = "20%";
+containerEl.style.color = "#ffffff";
+containerEl.style.backgroundColor = "lightblue";
+
+btnEl.onclick = function () {
+  let randomNumberOne = Math.floor(Math.random() * 10).toString();
+  let randomNumberTwo = Math.floor(Math.random() * 10).toString();
+  let randomNumberThree = Math.floor(Math.random() * 10).toString();
+  let randomNumberFour = Math.floor(Math.random() * 10).toString();
+  let randomNumberFive = Math.floor(Math.random() * 10).toString();
+  let randomNumberSix = Math.floor(Math.random() * 10).toString();
+  let allRandomNumbers = `#${randomNumberOne}${randomNumberTwo}${randomNumberThree}${randomNumberFour}${randomNumberFive}${randomNumberSix}`;
+  containerEl.style.backgroundColor = allRandomNumbers;
+  colorNameEl.innerHTML = allRandomNumbers;
+  btnEl.style.color = allRandomNumbers;
+  containerEl.style.boxShadow = `2px 5px ${allRandomNumbers}`;
+};
